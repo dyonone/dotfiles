@@ -1,0 +1,19 @@
+#!/bin/bash
+
+MENU="$(rofi -sep "|" -dmenu -p "POWER MENU" -theme-str 'inputbar { children: [prompt];}' \
+-hide-scrollbar true \
+-lines 4 \
+-line-padding 18 \
+-width 10 \
+-yoffset 32 \
+-location 3 \
+-font "Fantasque Sans Mono 13" \
+-color-window "#1a1b26,#e91e63,#1a1b26" \
+-color-normal "#232433,#afb8c6,#232433,#e91e63" \
+<<< "Logout|Suspend|Reboot|Shutdown")"
+case "$MENU" in
+  *Logout) bspc quit ;;
+  *Suspend) systemctl suspend ;;
+  *Reboot)  reboot ;;
+  *Shutdown) poweroff
+esac

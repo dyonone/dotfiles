@@ -1,0 +1,15 @@
+#!/bin/bash
+
+rofi -modi drun,run -show drun \
+-display-drun "APP" -drun-display-format "{name}" \
+-hide-scrollbar \
+-lines 10 \
+-line-padding 18 \
+-width 30 \
+-yoffset 32 \
+-location 1 \
+-columns 2 \
+-show-icons \
+-font "Fantasque Sans Mono 13" \
+-color-window "#1a1b26,#e91e63,#1a1b26" \
+-color-normal "#232433,#afb8c6,#232433,#e91e63"
